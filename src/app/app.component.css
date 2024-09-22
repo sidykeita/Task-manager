@@ -1,0 +1,15 @@
+/* Utilisation de CSS Grid pour organiser la mise en page */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne par défaut */
+    gap: 20px; /* Espace entre les composants */
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    /* Sur un écran plus large (tablette ou ordinateur), on utilise deux colonnes */
+    .container {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  

@@ -1,0 +1,37 @@
+/* Rendre la liste des tâches responsive */
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Les éléments seront placés les uns en dessous des autres */
+    gap: 10px; /* Ajoute de l'espace entre chaque tâche */
+  }
+  
+  li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex; /* Utiliser Flexbox pour placer les boutons à côté de la tâche */
+    justify-content: space-between; /* Espace entre la tâche et les boutons */
+    align-items: center;
+  }
+  
+  button {
+    margin-left: 5px; /* Espace entre les boutons */
+  }
+  
+  /* Styles par défaut (petits écrans) */
+li {
+    flex-direction: column; /* Les boutons passent sous la tâche sur les petits écrans */
+    align-items: flex-start;
+  }
+  
+  @media (min-width: 600px) {
+    /* Sur les écrans plus larges (tablette, ordinateur), les boutons s'alignent horizontalement */
+    li {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
